@@ -105,4 +105,20 @@ class TicTacToe
     end
   end
 
+  def play
+    loop do
+      turn
+      if over?
+        break
+      end
+    end
+    if won? != nil
+      display_board
+      puts "Congratualations! Player #{winner} has won!"
+    else draw? == true
+      display_board
+      puts "This game has ended in a tie."
+    end
+  end
+
 end

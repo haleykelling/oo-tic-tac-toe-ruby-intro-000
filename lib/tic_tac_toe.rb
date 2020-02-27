@@ -81,14 +81,11 @@ class TicTacToe
       elsif index == "O"
         true
       else
-        false
+        return false
       end
     end
     if true
       return true
-    end
-    if false
-      return false
     end
   end
 

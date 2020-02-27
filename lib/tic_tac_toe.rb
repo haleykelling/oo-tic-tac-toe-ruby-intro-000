@@ -13,7 +13,7 @@ class TicTacToe
     puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
 
   def input_to_index(input)
-    index = input.to_i - 1
+    @index = input.to_i - 1
   end
 
   def current_player(board)
@@ -24,4 +24,7 @@ class TicTacToe
     board.count{|token| token == "X" || token == "O"}
   end
 
+  def move(index, token = "X")
+    @board[@index] = token
+  end
 end

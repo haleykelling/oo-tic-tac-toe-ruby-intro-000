@@ -25,7 +25,7 @@ class TicTacToe
     board.count{|token| token == "X" || token == "O"}
   end
 
-  def move(index, value = "X")
+  def move(@index, value = "X")
     @board[@index] = value
   end
 end

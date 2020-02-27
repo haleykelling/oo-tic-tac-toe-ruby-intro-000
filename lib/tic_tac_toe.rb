@@ -48,6 +48,7 @@ class TicTacToe
         break
       end
     end
+    display_board
   end
 
 end

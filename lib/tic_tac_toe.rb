@@ -108,7 +108,7 @@ class TicTacToe
   def play
     loop do
       turn
-      if over?
+      if over? == true
         break
       end
     end

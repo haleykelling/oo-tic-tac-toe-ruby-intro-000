@@ -71,44 +71,32 @@ class TicTacToe
     end
   end
 
-def full?(board)
-  board.each do |index|
-    if index == "X"
-      true
-    elsif index == "O"
-      true
-    else
-      return false
+  def full?
+    @board.each do |index|
+      if index == "X"
+        true
+      elsif index == "O"
+        true
+      else
+        false
+      end
     end
   end
-  if true
-    return true
-  end
-end
 
-def draw?(board)
-  if full?(board) == true && won?(board) == nil
-    return true
-  else
-    return false
+  def draw?
+    full? == true && won? == nil
   end
-end
 
-def over?(board)
-  if won?(board) != nil || draw?(board) == true || full?(board) == true
-    return true
-  else
-    return false
+  def over?
+    won? != nil || draw? == true || full? == true
   end
-end
 
-def winner(board)
-  if won?(board) != nil
-    return board[won?(board)[0]]
-  else
-    return nil
+  def winner
+    if won? != nil
+      return @board[won?[0]]
+    else
+      return nil
+    end
   end
-end
-
 
 end
